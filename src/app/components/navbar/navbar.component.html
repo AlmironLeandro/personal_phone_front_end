@@ -1,0 +1,13 @@
+<nav class="navbar bg-body-tertiary d-flex flex-row justify-content-around p-3 ">
+    <div class="nombre">Personal</div>
+    <div *ngIf="!isNavbarUser" class="signIn">
+        <button type="button" (click)="openDialog()" class="btn btn-light">Registrarse</button>
+    </div>
+    <div *ngIf="isNavbarUser">
+        <button mat-button [matMenuTriggerFor]="menu">Leandro | Gonzales</button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>Perfil</button>
+            <button mat-menu-item>Cerrar sesión</button>
+        </mat-menu>
+    </div>
+</nav>

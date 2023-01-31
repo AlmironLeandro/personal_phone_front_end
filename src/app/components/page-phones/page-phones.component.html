@@ -1,0 +1,22 @@
+<app-navbar [isNavbarUser]="true"></app-navbar>
+
+<div class="title d-flex justify-content-center align-items-center">
+    <mat-icon class="flip">smartphone</mat-icon>
+    <h1 class="p-1 m-3" style="text-decoration: underline rgb(255, 255, 255); ">Celulares</h1>
+    <mat-icon>smartphone</mat-icon>
+</div>
+
+
+<div class="container-phones 
+d-flex flex-wrap flex-row 
+justify-content-center
+justify-content-lg-start
+justify-content-md-start
+align-items-center">
+    <div *ngFor="let item of [1,1,1,1,1,1,1,1,1,1,1,1] let i = index"
+        class="m-5 animate__animated animate__bounceInRight animation-{{i*2}}">
+        <app-phone class=""></app-phone>
+    </div>
+</div>
+
+<app-phone-cart-icon></app-phone-cart-icon>

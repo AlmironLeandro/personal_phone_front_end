@@ -1,0 +1,14 @@
+.phones-cart {
+    position: fixed;
+    right: 1.5rem;
+    top: 10rem;
+}
+
+.phones-cart {
+    background-color: var(--color-2) !important;
+    color: white;
+
+    &:hover {
+        background-color: var(--color-1) !important;
+    }
+}

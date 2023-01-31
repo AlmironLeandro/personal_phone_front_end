@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+:root {
+    //Paleta de colores seleccionada.
+    --color-1: #121212;
+    --color-2: #191919;
+    --color-3: #4c5f8c;
+    --color-4: #80a5ff;
+}
+
+
+@for $i from 1 through 100 {
+    .animation-#{$i} {
+        animation-delay: #{$i/10}s;
+    }
+}

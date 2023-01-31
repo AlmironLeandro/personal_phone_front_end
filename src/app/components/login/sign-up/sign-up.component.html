@@ -1,0 +1,36 @@
+<h2 mat-dialog-title>Registrarse en Personal</h2>
+<mat-dialog-content class="mat-typography">
+    <div class="container-sign-in">
+        <!-- TODO: realizar form usuario, contraseña, ingresar por google, registrarse, olvido contraseña -->
+
+        <div class="box d-flex flex-column justify-content-center align-items-center">
+            <div class="input_item">
+                <mat-form-field appearance="fill">
+                    <mat-label>Ingrese su email</mat-label>
+                    <input matInput placeholder="pat@example.com" [formControl]=email required>
+                    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="input_item">
+                <mat-form-field appearance="fill">
+                    <mat-label>Ingrese una contraseña</mat-label>
+                    <input matInput placeholder="contraseña1234" [formControl]=password required>
+                    <mat-error *ngIf="email.invalid">{{getErrorMessagePassword()}}</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="input_item">
+                <mat-form-field appearance="fill">
+                    <mat-label>Ingrese la contraseña</mat-label>
+                    <input matInput placeholder="contraseña1234" [formControl]=rePassword required>
+                    <mat-error *ngIf="email.invalid">{{getErrorMessagePassword()}}</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button (click)="enter()" [disabled]="!validBothPass()" mat-button [mat-dialog-close]="true">Registrar</button>
+</mat-dialog-actions>

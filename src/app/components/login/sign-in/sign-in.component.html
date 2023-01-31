@@ -1,0 +1,23 @@
+<div class="container-sign-in">
+    <!-- TODO: realizar form usuario, contraseña, ingresar por google, registrarse, olvido contraseña -->
+
+    <div class="box d-flex flex-column justify-content-center align-items-center">
+        <h3 class="input_item">Ingrese los datos de su cuenta</h3>
+        <div class="input_item">
+            <mat-form-field appearance="fill">
+                <mat-label>Ingrese su email</mat-label>
+                <input matInput placeholder="pat@example.com" [formControl]=email required>
+                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+        </div>
+        <div class="input_item">
+            <mat-form-field appearance="fill">
+                <mat-label>Ingrese su contraseña</mat-label>
+                <input matInput placeholder="contraseña1234" [formControl]=password required>
+                <mat-error *ngIf="email.invalid">{{getErrorMessagePassword()}}</mat-error>
+            </mat-form-field>
+        </div>
+        <button type="button" class="btn input_item" (click)="ingresar()">Ingresar</button>
+    </div>
+
+</div>

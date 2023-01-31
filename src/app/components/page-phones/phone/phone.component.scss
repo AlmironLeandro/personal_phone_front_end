@@ -1,0 +1,19 @@
+.card-phone {
+    width: 200px;
+    height: 500px;
+    background-color: whitesmoke !important;
+    color: black !important;
+    box-shadow: -1px 0px 13px 0px rgba(0, 0, 0, 0.42);
+    -webkit-box-shadow: -1px 0px 13px 0px rgba(0, 0, 0, 0.42);
+    -moz-box-shadow: -1px 0px 13px 0px rgba(0, 0, 0, 0.42);
+}
+
+button {
+
+    background-color: var(--color-3);
+    color: white;
+    &:hover
+    {
+        background-color: var(--color-4);
+    }
+}
